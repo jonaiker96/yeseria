@@ -80,7 +80,7 @@
       }
 
       .Empresa{
-        margin-top: 150px;
+        margin-top: 100px;
         margin-bottom: 80px;
         font-size: 45px;
         font-family: playfair display;
@@ -211,7 +211,7 @@
 
 /* Tarjeta principal */
 .card-servicio {
-  background-color: #ffffff;
+  background-color: #dbe3dc;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   overflow: hidden;
@@ -282,6 +282,95 @@
 
 .card-servicio .btn-card:hover {
   color: #062144;
+}
+
+.figure{
+  margin-left: 250px;
+}
+
+.servicos a{
+  color: #dbe3dc;
+}
+
+h2{
+  color: #dbe3dc;
+}
+
+/* Layout del contenedor en Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Estructura de la tarjeta */
+.property-card {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen a sangría completa dentro del 40% izquierdo */
+.property-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.card-content p {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Pie de tarjeta semántico */
+.card-content footer {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.card-content address {
+  font-style: normal;
+  color: #495057;
+  margin-bottom: 0.25rem;
+}
+
+.card-content address i {
+  color: #dc3545;
+  margin-right: 0.25rem;
+}
+
+.card-content time {
+  color: #8c959f;
+  display: block;
+}
+
+.card-content time i {
+  margin-right: 0.25rem;
 }
 
      

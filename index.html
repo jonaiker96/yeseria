@@ -1,325 +1,358 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   <link rel="stylesheet" href="style.css">
-     
-  </head>
-  <body>
-    <!-- Encabezado / Navbar -->
-    <header>
-        <nav class="navbar" style="background: linear-gradient(90deg, #bcc4c3 0%, #717474 45%, #393939 100%);">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-      <div style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #0e4142 0%, #063a43 50%, #032525 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; box-shadow: 0 3px 8px rgba(0,0,0,0.2);">
-        🛠️
-      </div>
-      <span style="font-weight: 700; background: linear-gradient(90deg, #204a4d 0%, #103135 50%, #02313d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-        Los Bendigo
-      </span>
-    </a>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Servicios profesionales de yeso proyectado, revoque, albañilería, electricidad y plomería."
+    />
+    <title>Los Bendigo | Construcción y Acabados</title>
 
-        <ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Servicios</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Proyectos</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Contacto</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Empresa</a>
-  </li>
-</ul>
-</div>
-</nav> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="container-fluid navbar__inner">
+          <a class="navbar-brand" href="#" aria-label="Inicio">
+            <span class="brand-icon">🛠️</span>
+            <span class="brand-text">Los Bendigo</span>
+          </a>
+
+          <ul class="nav-menu" aria-label="Menú principal">
+            <li><a class="nav-link active" href="#servicios">Servicios</a></li>
+            <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li><a class="nav-link" href="#empresa">Empresa</a></li>
+            <li><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <!-- Carrusel principal -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./pages/imagenes/Yesero.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./pages/imagenes/Revoque 1.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img class="maquina" src="./pages/imagenes/antes y despues 4.png" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<main>
-<!-- Sección de Servicios -->
-
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-5 fw-bold text-white fs-2">Servicios</h2>
-    
-    <div class="row g-4">
-      
-      <!-- Tarjeta 1: Yeso Proyectado -->
-      <div class="col-md-4">
-        <article class="card-servicio">
-          <div class="img-wrapper">
-            <img src="./pages/imagenes/Yesero.jpg" alt="Yeso Proyectado">
-          </div>
-          <div class="card-body">
-            <div>
-              <h3 class="card-title">Yeso Proyectado</h3>
-              <p class="card-text">
-                <strong>Acabados perfectos en tiempo récord.</strong> Aplicamos yeso proyectable con tecnología de vanguardia que garantiza muros perfectamente lisos y máxima durabilidad.
-              </p>
+    <main>
+      <section class="hero" aria-label="Carrusel principal">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./pages/imagenes/Yesero.jpg"
+                class="d-block w-100 carousel-image"
+                alt="Trabajos de yeso proyectado"
+              />
             </div>
-            <div class="text-end mt-auto">
-              <a href="#contacto" class="btn-card">Cotizar servicio &rarr;</a>
+            <div class="carousel-item">
+              <img
+                src="./pages/imagenes/Revoque 1.jpg"
+                class="d-block w-100 carousel-image"
+                alt="Revoque proyectado"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./pages/imagenes/antes y despues 4.png"
+                class="d-block w-100 carousel-image"
+                alt="Antes y después de un acabado profesional"
+              />
             </div>
           </div>
-        </article>
-      </div>
 
-      <!-- Tarjeta 2: Revoque Proyectado -->
-      <div class="col-md-4">
-        <article class="card-servicio">
-          <div class="img-wrapper">
-            <img src="./pages/imagenes/Revoque.jpg" alt="Revoque Proyectado">
-          </div>
-          <div class="card-body">
-            <div>
-              <h3 class="card-title">Revoque Proyectado</h3>
-              <p class="card-text">
-                <strong>Paredes perfectas y máxima resistencia.</strong> Optimizamos la protección de tus muros con mezclas homogéneas y excelente adherencia que reducen plazos de obra.
-              </p>
-            </div>
-            <div class="text-end mt-auto">
-              <a href="#contacto" class="btn-card">Cotizar servicio &rarr;</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Tarjeta 3: Pintura Profesional -->
-      <div class="col-md-4">
-        <article class="card-servicio">
-          <div class="img-wrapper">
-            <img src="./pages/imagenes/tarjetas/pintura.jpg" alt="Pintura Profesional">
-          </div>
-          <div class="card-body">
-            <div>
-              <h3 class="card-title">Pintura Profesional</h3>
-              <p class="card-text">
-                <strong>Color, protección y acabado impecable.</strong> Transformamos interiores y exteriores con preparación minuciosa de superficies para resultados duraderos.
-              </p>
-            </div>
-            <div class="text-end mt-auto">
-              <a href="#contacto" class="btn-card">Cotizar servicio &rarr;</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-    </div>
-  </div>
-</section>
-  <section class="py-5">
-  <div class="container">
-    
-    <div class="row g-4">
-      
-      <!-- Tarjeta 4: Albañilería -->
-      <div class="col-md-4">
-        <article class="card-servicio">
-          <div class="img-wrapper">
-            <img src="./pages/imagenes/tarjetas/albañileria.jpg" alt="Albañilería">
-          </div>
-          <div class="card-body">
-            <div>
-              <h3 class="card-title">Albañilería</h3>
-              <p class="card-text">
-                <strong>Bases sólidas y acabados de confianza para tu proyecto..</strong> Bases sólidas y acabados de confianza para tu proyecto. Realizamos todo tipo de trabajos de albañilería general, desde reformas puntuales hasta construcciones de gran envergadura. Garantizamos un trabajo limpio, estructuras firmes y un cumplimiento riguroso de los plazos de entrega.
-              </p>
-            </div>
-            <div class="text-end mt-auto">
-              <a href="#contacto" class="btn-card">Cotizar servicio &rarr;</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Tarjeta 5: Electricidad -->
-      <div class="col-md-4">
-        <article class="card-servicio">
-          <div class="img-wrapper">
-            <img src="./pages/imagenes/tarjetas/electricidad.jpg" alt="Electricidad">
-          </div>
-          <div class="card-body">
-            <div>
-              <h3 class="card-title">Electricidad</h3>
-              <p class="card-text">
-                <strong>Instalaciones seguras, tableros normados.</strong> Instalaciones seguras, tableros normados. y la máxima eficiencia energética para tu obra.
-              </p>
-            </div>
-            <div class="text-end mt-auto">
-              <a href="#contacto" class="btn-card">Cotizar servicio &rarr;</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Tarjeta 6: Plomería -->
-      <div class="col-md-4">
-        <article class="card-servicio">
-          <div class="img-wrapper">
-            <img src="./pages/imagenes/tarjetas/plomeria.jpg" alt="Plomería">
-          </div>
-          <div class="card-body">
-            <div>
-              <h3 class="card-title">Plomería </h3>
-              <p class="card-text">
-                <strong>Cañerías de alta resistencia, cero filtraciones.</strong> Cañerías de alta resistencia, cero filtraciones. y un servicio garantizado para tu proyecto.
-              </p>
-            </div>
-            <div class="text-end mt-auto">
-              <a href="#contacto" class="btn-card">Cotizar servicio &rarr;</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-<hr>
-
-<!-- Sección de Proyectos -->
-<h2>Proyectos</h2>
-
-<div class="card-grid">
-
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="./pages/imagenes/Maquina 1.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="./pages/imagenes/tarjetas/yesoProyectable2.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="./pages/imagenes/tarjetas/yesoProyectable2.jpg" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- Sección de Empresa -->
-<h2 class="Empresa">Empresa</h2>
-
-<div class="row align-items-center">
-  <!-- Columna izquierda: Imagen -->
-  <div class="col-md-6">
-    <figure class="figure m-0">
-      <img src="./pages/imagenes/Maquina 1.jpg" class="figure-img img-fluid rounded mb-2" alt="Maquina de yeso proyectable">
-      <figcaption class="figure-caption text-end">Maquina de alta precicion y tecnologia innovadora para proyectos de construcción.</figcaption>
-    </figure>
-  </div>
-
-  <!-- Columna derecha: Párrafo -->
-  <div class="col-md-6">
-    <p class="parrafo">
-      Fundador y Director en Construcción
-
-Llevo más de 20 años dedicado con pasión al rubro de la construcción. Lo que comenzó como un camino de puro esfuerzo y aprendizaje práctico se convirtió en Los Bendecidos, una empresa referente en la aplicación de yeso y revoque proyectable.
-
-Hoy cuento con el orgullo de dirigir múltiples equipos de trabajo y coordinar proyectos de alto nivel, aportando no solo maquinaria de última generación, sino también la experiencia de quien conoce el oficio desde las bases. Mi prioridad absoluta es el detalle: aseguro en cada obra una terminación perfecta que refleje el estándar de excelencia que nos caracteriza.
-    </p>
-  </div>
-</div>
-
- <section class="contact-section required">
-        <div class="glass-card">
-            <h2 class="title">Contacto</h2>
-            
-            <div class="content-grid">
-                <!-- Texto a la izquierda -->
-                <div class="text-side">
-                    <p>«¿Tienes un proyecto en mente? Escríbenos y calcula tu presupuesto hoy mismo.»</p>
-                </div>
-
-                <!-- Formulario a la derecha -->
-                <div class="form-side">
-                    <form class="form-grid">
-                        <div>
-                            <input type="text" class="input-field" placeholder="Nombre" required>
-                        </div>
-                        <div>
-                            <input type="text" class="input-field" placeholder="Apellido" required>
-                        </div>
-                        <div>
-                            <input type="email" class="input-field" placeholder="Correo electrónico" required>
-                        </div>
-                        <div>
-                            <input type="tel" class="input-field" placeholder="Teléfono">
-                        </div>
-                        <div class="full-width">
-                            <textarea class="input-field" placeholder="Escribe tu mensaje..." rows="4" required></textarea>
-                        </div>
-                        <div class="full-width">
-                            <button type="submit" class="submit-btn">ENVIAR MENSAJE</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+            aria-label="Anterior"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+            aria-label="Siguiente"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
         </div>
-    </section>
+      </section>
 
+      <section id="servicios" class="section">
+        <div class="container">
+          <h2 class="section-title">Servicios</h2>
 
+          <div class="services-grid">
+            <article class="card-servicio">
+              <div class="img-wrapper">
+                <img src="./pages/imagenes/Yesero.jpg" alt="Yeso Proyectado" />
+              </div>
+              <div class="card-body">
+                <div>
+                  <h3 class="card-title">Yeso Proyectado</h3>
+                  <p class="card-text">
+                    <strong>Acabados perfectos en tiempo récord.</strong> Aplicamos
+                    yeso proyectable con tecnología de vanguardia para muros lisos y
+                    resistentes.
+                  </p>
+                </div>
+                <div class="text-end mt-auto">
+                  <a href="#contacto" class="btn-card">Cotizar servicio →</a>
+                </div>
+              </div>
+            </article>
 
+            <article class="card-servicio">
+              <div class="img-wrapper">
+                <img src="./pages/imagenes/Revoque.jpg" alt="Revoque Proyectado" />
+              </div>
+              <div class="card-body">
+                <div>
+                  <h3 class="card-title">Revoque Proyectado</h3>
+                  <p class="card-text">
+                    <strong>Paredes perfectas y máxima resistencia.</strong>
+                    Optimizamos la protección de tus muros con mezclas homogéneas y
+                    excelente adherencia.
+                  </p>
+                </div>
+                <div class="text-end mt-auto">
+                  <a href="#contacto" class="btn-card">Cotizar servicio →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card-servicio">
+              <div class="img-wrapper">
+                <img
+                  src="./pages/imagenes/tarjetas/pintura.jpg"
+                  alt="Pintura Profesional"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <h3 class="card-title">Pintura Profesional</h3>
+                  <p class="card-text">
+                    <strong>Color, protección y acabado impecable.</strong>
+                    Transformamos interiores y exteriores con preparación
+                    meticulosa y acabados duraderos.
+                  </p>
+                </div>
+                <div class="text-end mt-auto">
+                  <a href="#contacto" class="btn-card">Cotizar servicio →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card-servicio">
+              <div class="img-wrapper">
+                <img
+                  src="./pages/imagenes/tarjetas/albañileria.jpg"
+                  alt="Albañilería"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <h3 class="card-title">Albañilería</h3>
+                  <p class="card-text">
+                    <strong>Bases sólidas y acabados de confianza.</strong> Realizamos
+                    reformas y obras generales con buen cumplimiento del plazo y
+                    estructura fiable.
+                  </p>
+                </div>
+                <div class="text-end mt-auto">
+                  <a href="#contacto" class="btn-card">Cotizar servicio →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card-servicio">
+              <div class="img-wrapper">
+                <img
+                  src="./pages/imagenes/tarjetas/electricidad.jpg"
+                  alt="Electricidad"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <h3 class="card-title">Electricidad</h3>
+                  <p class="card-text">
+                    <strong>Instalaciones seguras y eficientes.</strong> Tableros
+                    normados, mayor eficiencia energética y trabajos seguros.
+                  </p>
+                </div>
+                <div class="text-end mt-auto">
+                  <a href="#contacto" class="btn-card">Cotizar servicio →</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card-servicio">
+              <div class="img-wrapper">
+                <img
+                  src="./pages/imagenes/tarjetas/plomeria.jpg"
+                  alt="Plomería"
+                />
+              </div>
+              <div class="card-body">
+                <div>
+                  <h3 class="card-title">Plomería</h3>
+                  <p class="card-text">
+                    <strong>Cañerías resistentes y cero filtraciones.</strong>
+                    Instalaciones y mantenimiento para viviendas y obras.
+                  </p>
+                </div>
+                <div class="text-end mt-auto">
+                  <a href="#contacto" class="btn-card">Cotizar servicio →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <hr>
+
+      <section id="proyectos" class="section">
+        <div class="container">
+          <h2 class="section-title">Proyectos</h2>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <img
+                src="./pages/imagenes/tarjetas/Proyecto brasilia.jpg"
+                alt="Proyecto Brasilia"
+              />
+              <div class="project-card__body">
+                <h3>Proyecto Brasilia</h3>
+                <p>Arroyo 3470</p>
+                <small>Acabado de yeso proyectado</small>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="./pages/imagenes/tarjetas/revoque.jpeg"
+                alt="Revoque profesional"
+              />
+              <div class="project-card__body">
+                <h3>Revoque Premium</h3>
+                <p>Terminación lisa y uniforme</p>
+                <small>Obra residencial</small>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="./pages/imagenes/tarjetas/weber.webp"
+                alt="Aplicación con sistema Weber"
+              />
+              <div class="project-card__body">
+                <h3>Weber System</h3>
+                <p>Detalle y calidad profesional</p>
+                <small>Proyecto corporativo</small>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="empresa" class="section">
+        <div class="container">
+          <h2 class="section-title">Empresa</h2>
+
+          <div class="company-layout">
+            <figure class="company-figure">
+              <img
+                src="./pages/imagenes/Maquina 1.jpg"
+                alt="Máquina de yeso proyectable"
+              />
+              <figcaption>
+                Máquina de alta precisión y tecnología innovadora.
+              </figcaption>
+            </figure>
+
+            <div class="company-copy">
+              <p class="parrafo">
+                Fundador y Director en Construcción. Llevo más de 20 años dedicado
+                con pasión al rubro de la construcción. Lo que comenzó como un
+                camino de esfuerzo y aprendizaje práctico se convirtió en Los
+                Bendigo, una empresa referente en la aplicación de yeso y revoque
+                proyectable.
+              </p>
+              <p class="parrafo">
+                Hoy dirijo múltiples equipos de trabajo y coordino proyectos de alto
+                nivel, aportando no solo maquinaria de última generación, sino
+                también la experiencia de quien conoce el oficio desde las bases.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact-section">
+        <div class="glass-card">
+          <h2 class="title">Contacto</h2>
+
+          <div class="content-grid">
+            <div class="text-side">
+              <p>
+                «¿Tienes un proyecto en mente? Escríbenos y calcula tu presupuesto
+                hoy mismo.»
+              </p>
+            </div>
+
+            <div class="form-side">
+              <form class="form-grid">
+                <div>
+                  <input type="text" class="input-field" placeholder="Nombre" required />
+                </div>
+                <div>
+                  <input type="text" class="input-field" placeholder="Apellido" required />
+                </div>
+                <div>
+                  <input type="email" class="input-field" placeholder="Correo electrónico" required />
+                </div>
+                <div>
+                  <input type="tel" class="input-field" placeholder="Teléfono" />
+                </div>
+                <div class="full-width">
+                  <textarea
+                    class="input-field"
+                    placeholder="Escribe tu mensaje..."
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <div class="full-width">
+                  <button type="submit" class="submit-btn">ENVIAR MENSAJE</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2024 Los Bendigo. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

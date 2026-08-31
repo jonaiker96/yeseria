@@ -1,18 +1,19 @@
 :root {
   --bg-1: #d8ded9;
-  --bg-2: #8c928d;
+  --bg-2: #6d7570;
   --bg-3: #313633;
   --text: #1d1d1d;
   --muted: #5f6364;
   --panel: #dbe3dc;
-  --nav-start: #bcc4c3;
-  --nav-mid: #717474;
-  --nav-end: #393939;
+  --nav-start: #9fa6a2;
+  --nav-mid: #5a6360;
+  --nav-end: #2b2f32;
   --primary: #0d2d39;
   --primary-strong: #062d35;
   --contact-dark: rgba(26, 30, 36, 0.75);
   --white: #ffffff;
   --shadow: rgba(0, 0, 0, 0.15);
+  --title-color: #f5f5f5;
 }
 
 * {
@@ -59,12 +60,16 @@ a {
   text-align: center;
   font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 700;
-  color: var(--white);
+  color: var(--title-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Corrección: el navbar debe poder envolver y no romper en móvil */
+/* HEADER Y NAVEGACIÓN */
 .site-header {
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar {
@@ -116,7 +121,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -125,17 +130,38 @@ a {
 .nav-link {
   color: var(--white);
   font-weight: 600;
-  padding: 0.5rem 0.8rem;
+  padding: 0.6rem 1rem;
   border-radius: 0.5rem;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.12);
 }
 
-/* Carrusel */
+/* CARRUSEL */
 .hero {
   width: 100%;
 }
@@ -162,7 +188,7 @@ a {
   width: 3.5rem;
 }
 
-/* Corrección: grid adaptable para tarjetas */
+/* TARJETAS DE SERVICIOS */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -231,14 +257,15 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-card:hover {
   color: var(--primary-strong);
+  transform: translateX(4px);
 }
 
-/* Corrección: sección de proyectos pasa a un grid fluido */
+/* TARJETAS DE PROYECTOS */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -246,8 +273,8 @@ a {
 }
 
 .project-card {
-  display: grid;
-  grid-template-columns: 120px 1fr;
+  display: flex;
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.92);
   border-radius: 0.9rem;
   overflow: hidden;
@@ -260,14 +287,25 @@ a {
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
 }
 
+.project-card__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
 .project-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
 }
 
 .project-card__body {
-  padding: 1rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -277,6 +315,7 @@ a {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
   color: #222;
+  font-weight: 700;
 }
 
 .project-card__body p,
@@ -288,9 +327,10 @@ a {
 .project-card__body small {
   display: block;
   margin-top: 0.4rem;
+  font-size: 0.85rem;
 }
 
-/* Corrección: elimina el margen fijo que rompe el layout */
+/* SECCIÓN EMPRESA */
 .company-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -329,14 +369,15 @@ a {
   font-family: "Georgia", serif;
 }
 
-/* Sección contacto */
+/* SECCIÓN CONTACTO */
 .contact-section {
   width: 100%;
   background-image:
     linear-gradient(var(--contact-dark), var(--contact-dark)),
-    url("./pages/imagenes/Revoque 2.jpg");
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=600&fit=crop");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   padding: 4rem 1rem;
 }
 
@@ -404,11 +445,13 @@ a {
 .input-field:focus {
   background: var(--white);
   border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.1);
 }
 
 textarea.input-field {
   resize: vertical;
   min-height: 130px;
+  font-family: inherit;
 }
 
 .submit-btn {
@@ -422,77 +465,17 @@ textarea.input-field {
   font-weight: 700;
   letter-spacing: 0.08rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .submit-btn:hover {
   background-color: #1a4375;
+  transform: translateY(-2px);
 }
 
+/* FOOTER */
 .site-footer {
-  padding: 1.5rem 0;
-  background: rgba(12, 15, 18, 0.7);
-  color: var(--white);
-  text-align: center;
-}
-
-.site-footer p {
-  margin: 0;
-}
-
-/* Media queries estrictas */
-@media (max-width: 767px) {
-  .navbar__inner {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .nav-menu {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .full-width {
-    grid-column: auto;
-  }
-
-  .project-card {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 575px) {
-  .section {
-    padding: 3rem 0;
-  }
-
-  .nav-menu {
-    gap: 0.4rem;
-  }
-
-  .nav-link {
-    padding: 0.45rem 0.55rem;
-    font-size: 0.92rem;
-  }
-
-  .carousel-inner,
-  .carousel-item {
-    height: 42vh;
-    min-height: 260px;
-  }
-
-  .glass-card {
-    padding: 1.25rem;
-  }
-}
-
-/* Estilos Base */
-.site-footer {
-  background-color: #111827; /* Oscuro moderno */
+  background-color: #111827;
   color: #f3f4f6;
   font-family: system-ui, -apple-system, sans-serif;
   padding-top: 2.5rem;
@@ -509,7 +492,6 @@ textarea.input-field {
   text-align: center;
 }
 
-/* Sección de Redes */
 .redes h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -536,15 +518,13 @@ textarea.input-field {
   text-decoration: none;
 }
 
-/* Animaciones e Interacción en los Íconos */
 .iconos a:hover {
   color: #ffffff;
-  background-color: #3b82f6; /* Azul primario al pasar el cursor */
+  background-color: #3b82f6;
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-/* Barra de Copyright */
 .footer-bottom {
   margin-top: 2.5rem;
   padding: 1.25rem;
@@ -566,7 +546,82 @@ textarea.input-field {
   z-index: 1000;
 }
 
-.whatsapp:hover {
-  transform: scale(1.1);
+.whatsapp a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.whatsapp img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
   transition: transform 0.3s ease;
+}
+
+.whatsapp:hover img {
+  transform: scale(1.1);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+  .navbar__inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-card__image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .nav-menu {
+    gap: 0.3rem;
+  }
+
+  .nav-link {
+    padding: 0.45rem 0.55rem;
+    font-size: 0.92rem;
+  }
+
+  .carousel-inner,
+  .carousel-item {
+    height: 42vh;
+    min-height: 260px;
+  }
+
+  .glass-card {
+    padding: 1.25rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -52,7 +52,7 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
   event.preventDefault();
   
   // 1. Número de WhatsApp con código de país
-  const telefono = "5491126203720"; 
+  const telefono = "5491166075253"; 
 
   // 2. Obtener datos del formulario
   const nombre = document.querySelector('input[placeholder="Nombre"]').value.trim();

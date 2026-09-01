@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="120">
+  <defs>
+    <linearGradient id="sprayGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052FF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0052FF" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Isotipo -->
+  <g transform="translate(10, 10)">
+    <!-- Boquilla / Pistola -->
+    <rect x="10" y="42" width="28" height="16" rx="3" fill="#1A202C"/>
+    <path d="M 38 45 L 48 38 L 48 62 L 38 55 Z" fill="#1A202C"/>
+    <rect x="0" y="47" width="10" height="6" fill="#718096"/>
+    
+    <!-- Ráfaga de Proyección -->
+    <polygon points="52,40 95,15 95,85 52,60" fill="url(#sprayGrad)"/>
+    
+    <!-- Pared / Capa Lisa -->
+    <rect x="98" y="10" width="12" height="80" rx="2" fill="#0052FF"/>
+    <rect x="114" y="10" width="6" height="80" rx="1" fill="#E2E8F0"/>
+  </g>
+
+  <!-- Tipografía simulada -->
+  <text x="145" y="55" font-family="Arial, sans-serif" font-weight="900" font-size="26" fill="#1A202C" letter-spacing="1">LOS BENDIGO</text>
+  <text x="146" y="78" font-family="Arial, sans-serif" font-weight="600" font-size="12" fill="#0052FF" letter-spacing="2">YESO &amp; REVOQUE PROYECTADO</text>
+</svg>

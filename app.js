@@ -20,6 +20,30 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Botón Ir al Inicio (Scroll to Top)
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  const whatsappBtn = document.querySelector('.whatsapp');
+  
+  // Mostrar/ocultar botón al hacer scroll
+  window.addEventListener('scroll', () => {
+    // Mostrar el botón cuando el usuario haya hecho scroll de más de 300px
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add('show');
+      whatsappBtn.classList.add('scroll-active');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+      whatsappBtn.classList.remove('scroll-active');
+    }
+  });
+
+  // Scroll suave al inicio
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 });
 
 // Manejador del formulario y WhatsApp
@@ -69,4 +93,14 @@ ${texto}
 
   // 7. Limpiar el formulario
   document.querySelector('form').reset();
+});
+
+// Modal para imágenes de proyectos
+document.querySelectorAll('.clickable-image').forEach(image => {
+  image.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = this.src;
+    modalImage.alt = this.alt;
+  });
 });
